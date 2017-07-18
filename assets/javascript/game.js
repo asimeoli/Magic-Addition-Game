@@ -1,4 +1,3 @@
-
 var target = 0;
 var button1 = 0;
 var button2 = 0;
@@ -26,11 +25,11 @@ function getRandom(rangeLow, rangeHigh) {
 //initilizes target to random value between 19-120
 //initilizes buttons to random values between 1-12
 function startRound() {
-	target = getRandom(19,120);
-	button1 = getRandom(1,12);
-	button2 = getRandom(1,12);
-	button3 = getRandom(1,12);
-	button4 = getRandom(1,12);
+	target = getRandom(19, 120);
+	button1 = getRandom(1, 12);
+	button2 = getRandom(1, 12);
+	button3 = getRandom(1, 12);
+	button4 = getRandom(1, 12);
 	sum = 0;
 	refreshHTML();
 }
@@ -41,9 +40,9 @@ function addToSum(n) {
 	sum += n;
 	if (sum == target) {
 		winRound();
-	}else if (sum > target) {
+	} else if (sum > target) {
 		loseRound();
-	}else{
+	} else {
 		message = "Keep Playing!"
 	}
 }
@@ -73,35 +72,27 @@ function refreshHTML() {
 
 startRound();
 
-//jQuery
-$(document).ready(function() {
+//jQuery for button clicks
+$(document).ready(function () {
 
-$("#glasses").on("click", function() {
-				addToSum(button1);
-				refreshHTML();
+	$("#glasses").on("click", function () {
+		addToSum(button1);
+		refreshHTML();
+	});
+
+	$("#hat").on("click", function () {
+		addToSum(button2);
+		refreshHTML();
+	});
+
+	$("#cauldron").on("click", function () {
+		addToSum(button3);
+		refreshHTML();
+	});
+
+	$("#candles").on("click", function () {
+		addToSum(button4);
+		refreshHTML();
+	});
+
 });
-
-$("#hat").on("click", function() {
-				addToSum(button2);
-				refreshHTML();
-});
-
-$("#cauldron").on("click", function() {
-				addToSum(button3);
-				refreshHTML();
-});
-
-$("#candles").on("click", function() {
-				addToSum(button4);
-				refreshHTML();
-});
-
-});
-
-console.log(target);
-console.log(button1);
-console.log(button2);
-console.log(button3);
-console.log(button4);
-
-
