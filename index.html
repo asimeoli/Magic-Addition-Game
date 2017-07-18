@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Magic Collector</title>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic" rel="stylesheet">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+<body>
+
+<h1 id="title">Magic Collector!</h1>
+
+<div id="directions">
+	<p>You will be given a random number at the start of the game.</p>
+	<p>There are four magical items below. By clicking on an item you will add a specific amount of points to your total score.</p>
+	<p>You will win the game by matching your total score to the random number, you lose the game if your total score goes above the randowm number.</p>
+	<p>The value of each magical item is hidden from you until you click on it.</p>
+	<p>Each time the game starts, the value of the magical item will change.</p>
+</div>
+
+<div id="randomNumber">
+	<p>Goal Number:</p>
+	<p id="target"></p>
+</div>
+
+<div id="winsLosses">
+	<p>Wins: </p>
+	<p id="wins"></p>
+	<p>Loses: </p>
+	<p id="losses"></p>
+</div>
+	
+<div class="icons">
+	<img id="glasses" src="assets/images/Mage's Workstation/ICO/glasses.ico" width="150">
+	<img id="hat" src="assets/images/Mage's Workstation/ICO/hat.ico" width="150">
+	<img id="cauldron" src="assets/images/Mage's Workstation/ICO/cauldron.ico" width="150">
+	<img id="candles" src="assets/images/Mage's Workstation/ICO/candles.ico" width="150">
+</div>
+
+<div id="totalSumDisplay">
+	<p>Your current sum is:</p>
+	<p id="sum"></p>
+</div>
+
+<div id="messageDiv">
+	<p id="message"></p>
+</div>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
